@@ -1,6 +1,6 @@
 import { Stack, StackProps, Duration } from 'aws-cdk-lib'
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs'
-import { RestApi, Model, JsonSchemaType } from 'aws-cdk-lib/aws-apigateway'
+import { RestApi, Model, JsonSchemaType, Cors } from 'aws-cdk-lib/aws-apigateway'
 import { LambdaIntegration } from 'aws-cdk-lib/aws-apigateway'
 import { Runtime } from 'aws-cdk-lib/aws-lambda'
 import { Construct } from 'constructs'
@@ -32,7 +32,14 @@ export class TranslateFunctionStack extends Stack {
       },
     })
 
-    const restApiTranslateResource = restApi.root.addResource('translate')
+    const restApiTranslateResource = restApi.root.addResource('translate', {
+      defaultCorsPreflightOptions: {
+        allowOrigins: Cors.ALL_ORIGINS,
+        allowMethods: Cors.ALL_METHODS,
+        allowHeaders: Cors.DEFAULT_HEADERS,
+        statusCode: 200,
+      },
+    })
 
     const textModel: Model = restApi.addModel('TextModel', {
       schema: {
