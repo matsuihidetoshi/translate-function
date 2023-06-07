@@ -41,20 +41,26 @@ export class TranslateFunctionStack extends Stack {
       },
     })
 
-    const textModel: Model = restApi.addModel('TextModel', {
+    const translateModel: Model = restApi.addModel('translateModel', {
       schema: {
         type: JsonSchemaType.OBJECT,
         properties: {
           text: {
             type: JsonSchemaType.STRING,
           },
+          translateFrom: {
+            type: JsonSchemaType.STRING,
+          },
+          translateTo: {
+            type: JsonSchemaType.STRING,
+          },
         },
-        required: ['text'],
+        required: ['text', 'translateFrom', 'translateTo'],
       },
     })
 
     restApiTranslateResource.addMethod('POST', new LambdaIntegration(translateFunction), {
-      requestModels: { 'application/json': textModel },
+      requestModels: { 'application/json': translateModel },
     })
   }
 }

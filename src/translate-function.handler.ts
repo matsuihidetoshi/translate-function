@@ -5,13 +5,21 @@ const translate = new Translate()
 
 export const handler = async (event: APIGatewayProxyEvent) => {
   try {
-    const requestBody = JSON.parse(event.body || '{"text": ""}') as { text: string }
-    const textToTranslate = requestBody.text
+    const requestBody = JSON.parse(event.body || '{"text": "", "translateFrom": "", "translateTo": ""}') as {
+      text: string
+      translateFrom: string
+      translateTo: string
+    }
+    const Text = requestBody.text
+    const SourceLanguageCode = requestBody.translateFrom
+    const TargetLanguageCode = requestBody.translateTo
+
+    console.dir(requestBody, { depth: null })
 
     const translateParams = {
-      Text: textToTranslate,
-      SourceLanguageCode: 'ja',
-      TargetLanguageCode: 'en',
+      Text,
+      SourceLanguageCode,
+      TargetLanguageCode,
     }
 
     const translatedText = await translate.translateText(translateParams).promise()
