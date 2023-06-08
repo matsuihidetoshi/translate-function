@@ -20,3 +20,5 @@ AWS マネジメントコンソールからサービスを利用できる他、 
 
 ## アーキテクチャ
 
+![Voice Translate Architecture](https://github.com/matsuihidetoshi/translate-function/assets/38583473/ad4b8cd1-efa4-4f1e-9bd2-4c3f3a02fbdb)
+
