@@ -14,8 +14,6 @@ export const handler = async (event: APIGatewayProxyEvent) => {
     const SourceLanguageCode = requestBody.translateFrom
     const TargetLanguageCode = requestBody.translateTo
 
-    console.dir(requestBody, { depth: null })
-
     const translateParams = {
       Text,
       SourceLanguageCode,
