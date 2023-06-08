@@ -488,10 +488,42 @@ AWS マネジメントコンソールからサービスを利用できる他、 
 
 そのまま残していただいても構いませんが、冒頭の注意事項の通り思わぬ請求が発生する可能性もありますので、削除手順を記載します。
 
+***
+
 - 先ほどの Amplify ホスティングのページにて、 **アクション** > **アプリの削除** を選択します。
 
   ![スクリーンショット 2023-06-08 18 02 36](https://github.com/matsuihidetoshi/translate-function/assets/38583473/84220d16-0b90-48f3-ac05-755f2d13d4fa)
 
+***
+
 - **削除** を入力して、 **削除** をクリックします。
 
   ![スクリーンショット 2023-06-08 18 49 09](https://github.com/matsuihidetoshi/translate-function/assets/38583473/ec2bf635-1539-482c-a654-6c34bb05c822)
+
+***
+
+- 最後に、 CDK で管理している Web API を削除します。
+
+  ```bash
+  cdk destroy
+  ```
+
+***
+
+- 下記のように質問されるので、 `y` を入力して Enter を押下します。
+
+  ```bash
+  Are you sure you want to delete: TranslateFunctionStack (y/n)? y
+  ```
+
+***
+
+これで削除も完了です！
+
+## まとめ
+
+いかがでしたでしょうか？  
+Amazon Translate を AWS SDK で使用した私の感想ですが、思ったよりもずっと早くレスポンスが返ってきたので、色々なアプリケーションに組み込んで応用できそうだなと感じました！  
+みなさんもぜひ活用してみてください！
+
+Happy Coding!
