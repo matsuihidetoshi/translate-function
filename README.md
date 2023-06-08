@@ -1,14 +1,7 @@
-# Welcome to your CDK TypeScript project
+# Amazon Translate を使って
 
-This is a blank project for CDK development with TypeScript.
+こんにちは！ [**株式会社スタートアップテクノロジー**](https://startup-technology.com/) テックリード、 [**AWS Serverless HERO**](https://aws.amazon.com/developer/community/heroes/hidetoshi-matsui/) の松井です！
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+突然ですが、ビジネスや旅行などで突然外国語でコミュニケーションを取らなければならなくなり、困ったことはありませんか？
+そんな問題を解決するために、今回は [**Amazon Translate**](https://aws.amazon.com/jp/translate/) を使ってお手軽に **自作音声翻訳サイトを作る** 方法をご紹介します！
 
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
