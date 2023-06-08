@@ -400,3 +400,22 @@ AWS マネジメントコンソールからサービスを利用できる他、 
 
 - **AWS Amplify** を選択します。
 ![スクリーンショット 2023-06-08 17 18 33](https://github.com/matsuihidetoshi/translate-function/assets/38583473/5d10f31e-aa84-4e97-9bde-c7978c633c17)
+
+***
+
+- **使用を開始する** をクリックします。
+![スクリーンショット 2023-06-08 17 22 33](https://github.com/matsuihidetoshi/translate-function/assets/38583473/9aaeea84-6f07-492f-af41-159fb7766e38)
+
+***
+
+- 再度 **Amplify ホスティング** の **使用を開始する** をクリックします。
+![スクリーンショット 2023-06-08 17 24 30](https://github.com/matsuihidetoshi/translate-function/assets/38583473/d1a35eab-e707-4ecd-9d9f-ad6092279edd)
+
+***
+
+- **GitHub** を選択し **続行** をクリックします。
+![スクリーンショット 2023-06-08 17 26 04](https://github.com/matsuihidetoshi/translate-function/assets/38583473/83cfb1d4-b51a-40f2-a16b-efa1d73c44c9)
+
+***
+
+
