@@ -485,3 +485,8 @@ AWS マネジメントコンソールからサービスを利用できる他、 
   ![スクリーンショット 2023-06-08 17 54 19](https://github.com/matsuihidetoshi/translate-function/assets/38583473/ea3a1ed7-df66-4ee0-90c4-02915cb255b8)
 
 ### 5. 構成の削除
+
+そのまま残していただいても構いませんが、冒頭の注意事項の通り思わぬ請求が発生する可能性もありますので、削除手順を記載します。
+
+- 先ほどの Amplify ホスティングのページにて、 **アクション** > **アプリの削除** を選択します。
+![スクリーンショット 2023-06-08 18 02 36](https://github.com/matsuihidetoshi/translate-function/assets/38583473/84220d16-0b90-48f3-ac05-755f2d13d4fa)
