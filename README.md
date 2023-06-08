@@ -199,3 +199,22 @@ AWS マネジメントコンソールからサービスを利用できる他、 
     }
   }
   ```
+
+  - ①で、 REST API から受け取ったパラメータを使用して、 Amazon Translate に渡すパラメータを組み立てています。
+  - ②で、実際に Amazon Translate で翻訳しています。
+  - ③で、翻訳ページにレスポンスします。
+
+- 実際に Web API をデプロイします。
+
+  ```bash
+  cdk bootstrap #AWS アカウント内で一度も CDK を使用していない場合、実行します。
+  cdk deploy
+  ```
+
+- デプロイが成功したら下記のように出力されるので、 `=` に続く REST API のエンドポイントを控えます。
+
+  ```bash
+  Outputs:
+  TranslateFunctionStack.translatefunctionrestapiEndpoint******** = https://**********.execute-api.ap-northeast-1.amazonaws.com/v1/
+  ```
+
