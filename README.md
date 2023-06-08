@@ -399,37 +399,44 @@ AWS マネジメントコンソールからサービスを利用できる他、 
 ***
 
 - **AWS Amplify** を選択します。
-![スクリーンショット 2023-06-08 17 18 33](https://github.com/matsuihidetoshi/translate-function/assets/38583473/5d10f31e-aa84-4e97-9bde-c7978c633c17)
+
+  ![スクリーンショット 2023-06-08 17 18 33](https://github.com/matsuihidetoshi/translate-function/assets/38583473/5d10f31e-aa84-4e97-9bde-c7978c633c17)
 
 ***
 
 - **使用を開始する** をクリックします。
-![スクリーンショット 2023-06-08 17 22 33](https://github.com/matsuihidetoshi/translate-function/assets/38583473/9aaeea84-6f07-492f-af41-159fb7766e38)
+
+  ![スクリーンショット 2023-06-08 17 22 33](https://github.com/matsuihidetoshi/translate-function/assets/38583473/9aaeea84-6f07-492f-af41-159fb7766e38)
 
 ***
 
 - 再度 **Amplify ホスティング** の **使用を開始する** をクリックします。
-![スクリーンショット 2023-06-08 17 24 30](https://github.com/matsuihidetoshi/translate-function/assets/38583473/d1a35eab-e707-4ecd-9d9f-ad6092279edd)
+
+  ![スクリーンショット 2023-06-08 17 24 30](https://github.com/matsuihidetoshi/translate-function/assets/38583473/d1a35eab-e707-4ecd-9d9f-ad6092279edd)
 
 ***
 
 - **GitHub** を選択し **続行** をクリックします。
-![スクリーンショット 2023-06-08 17 26 04](https://github.com/matsuihidetoshi/translate-function/assets/38583473/83cfb1d4-b51a-40f2-a16b-efa1d73c44c9)
+
+  ![スクリーンショット 2023-06-08 17 26 04](https://github.com/matsuihidetoshi/translate-function/assets/38583473/83cfb1d4-b51a-40f2-a16b-efa1d73c44c9)
 
 ***
 
 - このような画面が表示された場合、 **Authorize AWS Amplify** をクリックします。
-![スクリーンショット 2023-06-08 17 28 16](https://github.com/matsuihidetoshi/translate-function/assets/38583473/66db21f9-24e1-495d-9f16-9874fd19210e)
+
+  ![スクリーンショット 2023-06-08 17 28 16](https://github.com/matsuihidetoshi/translate-function/assets/38583473/66db21f9-24e1-495d-9f16-9874fd19210e)
 
 ***
 
 - 自分の個人の GitHub アカウントをクリックします。
-![スクリーンショット 2023-06-08 17 30 16](https://github.com/matsuihidetoshi/translate-function/assets/38583473/5768ddd5-efa1-424a-ba2e-64735152306c)
+
+  ![スクリーンショット 2023-06-08 17 30 16](https://github.com/matsuihidetoshi/translate-function/assets/38583473/5768ddd5-efa1-424a-ba2e-64735152306c)
 
 ***
 
 - **Only select repositories** を選択し、自分のリポジトリに push した先ほどの `voice-transcript` を選択し、 **Install & Authorize** をクリックします。
-![スクリーンショット 2023-06-08 17 31 22](https://github.com/matsuihidetoshi/translate-function/assets/38583473/3da51d31-f0e5-4072-935c-192bb8d02e02)
+
+  ![スクリーンショット 2023-06-08 17 31 22](https://github.com/matsuihidetoshi/translate-function/assets/38583473/3da51d31-f0e5-4072-935c-192bb8d02e02)
 
 ***
 
