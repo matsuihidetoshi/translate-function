@@ -467,3 +467,21 @@ AWS マネジメントコンソールからサービスを利用できる他、 
 - 下記のような画面が表示されれば成功です！
 
   ![スクリーンショット 2023-06-08 17 48 13](https://github.com/matsuihidetoshi/translate-function/assets/38583473/12e52c2f-aedc-4d7f-9a3b-a2a2f257ed4d)
+
+### 4. 動作確認
+
+実際に動作確認してみましょう！
+
+***
+
+- **Translate from(翻訳元の言語)** と **Translate to(翻訳先の言語)** を選択し、 **Start translation** をクリックします。
+
+  ![スクリーンショット 2023-06-08 17 49 59](https://github.com/matsuihidetoshi/translate-function/assets/38583473/92e6f891-8bb4-4ad1-8fec-caf141c5d483)
+
+***
+
+- 翻訳元として選択した言語で話してみて、翻訳が出てきたら成功です！
+
+  ![スクリーンショット 2023-06-08 17 54 19](https://github.com/matsuihidetoshi/translate-function/assets/38583473/ea3a1ed7-df66-4ee0-90c4-02915cb255b8)
+
+### 5. 構成の削除
