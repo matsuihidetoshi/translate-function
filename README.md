@@ -233,3 +233,159 @@ AWS マネジメントコンソールからサービスを利用できる他、 
   ```
 
 ***
+
+### 1. 翻訳ページの構築
+
+続いて、翻訳ページを構築していきます。  
+今回はフレームワークやライブラリを使用しない非常にシンプルな HTML + JavaScript の単一ファイルの Web ページを AWS Amplify を使ってホスティングします。
+こちらもソースコードの解説も併せてしていきます。
+
+***
+
+- 下記コマンドを実行し、リポジトリをクローンします。
+
+    ```bash
+    git clone git@github.com:matsuihidetoshi/voice-transcript.git
+    ```
+
+***
+
+- ソースコードを解説します。
+
+  ```html
+  <!DOCTYPE html>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Voice Translate</title>
+    </head>
+    <body>
+      <div id="setting">
+        <h1>Voice Translate</h1>
+        <h2>Choose languages and press "Start translation".</h2>
+        <label for="translate-from">Translate from:</label>
+        <!-- ①翻訳元、翻訳先言語の選択 -->
+        <select id="translate-from">
+          <option value="ar,ar-SA">Arabic</option>
+          <!-- 省略 -->
+          <option value="tr,tr-TR">Turkish</option>
+        </select>
+        <br>
+        <label for="translate-to">Translate to:</label>
+        <select id="translate-to">
+          <option value="ar,ar-SA">Arabic</option>
+          <!-- 省略 -->
+          <option value="tr,tr-TR">Turkish</option>
+        </select>
+        <br>
+        <button id="start-translation">Start translation</button>
+      </div>
+      <div id="translate" style="display: none;">
+        <h3>Speak!</h3>
+        <p>translation:</p>
+        <!-- ②翻訳結果の表示 -->
+        <h1 id="translate-display"></h1>
+        <button id="restart">Restart</button>
+      </div>
+    </body>
+  </html>
+  <script>
+    SpeechRecognition = webkitSpeechRecognition || SpeechRecognition
+    const transcriptDisplay = document.getElementById('translate-display')
+    const recognition = new SpeechRecognition()
+
+    // ③翻訳開始ボタンをクリックして、文字起こししてから翻訳リクエストを送信
+    document.getElementById('start-translation').onclick = () => {
+      const settingElement = document.getElementById('setting')
+      const translateElement = document.getElementById('translate')
+      const sourceLangElement = document.getElementById('translate-from')
+      const sourceLang = sourceLangElement.options[sourceLangElement.selectedIndex].value.split(',')[1]
+
+      settingElement.style = 'display: none;'
+      translateElement.style = ''
+
+      startTranslation(sourceLang)
+    }
+
+    document.getElementById('restart').onclick = () => {
+      location.reload()
+    }
+
+    // ④文字起こしと翻訳処理を実行する関数
+    const startTranslation = (sourceLang) => {
+      let index = 0
+      recognition.continuous = true
+      recognition.lang = sourceLang
+
+      recognition.onresult = (event) => {
+        getTranslatedText(
+          event.results[index][0].transcript,
+        ).then((response) => {
+          transcriptDisplay.innerHTML = response.translatedText.TranslatedText
+        })
+        index ++
+      }
+
+      recognition.start()
+    }
+
+    // ⑤翻訳をリクエストする関数
+    const getTranslatedText = async (text) => {
+      const translateFromElement = document.getElementById('translate-from')
+      const translateToElement = document.getElementById('translate-to')
+      const translateFrom = translateFromElement.options[translateFromElement.selectedIndex].value.split(',')[0]
+      const translateTo = translateToElement.options[translateToElement.selectedIndex].value.split(',')[0]
+
+      // ⑥翻訳 API へのリクエスト（ここに REST API のエンドポイントを記述）
+      const response = await fetch('https://**********.execute-api.ap-northeast-1.amazonaws.com/v1/translate', {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          text,
+          translateFrom,
+          translateTo,
+        })
+      })
+      return response.json()
+    }
+  </script>
+  ```
+
+  - ①で、翻訳元、翻訳先の言語を選択するプルダウンを作成しています。
+    - SpeechRecognition API は `ar-SA` のような形式で言語コードを受け付ける一方で、 Amazon Translate は `ar` のような形式と `ar-SA` のような形式が混在した形で言語コードを受け取るので、今回は `value` 属性に `ar,ar-SA` のようなカンマ区切りの形式でそれぞれの言語コードを記述しています。
+  - ②の箇所に翻訳結果が表示されます。
+  - ③で、ボタンの押下と共に文字起こしと翻訳がスタートします。
+    - プルダウンで選択した翻訳元の言語コードを受け取って SpeechRecognition API に文字起こしする言語を渡しています。
+    - 設定画面と翻訳画面の表示切り替えも行なっています。
+  - ④で、文字起こしをトリガーにして逐次翻訳 API にリクエストを送信しています。
+  - ⑤で、実際に翻訳 API にリクエストを送信しています。
+    - `option` 要素の `value` 属性の形式が先ほどの①の通りの形式になっているので `,` で分割して取得したものを API にリクエストするパラメータに含めています。
+  - ⑥で翻訳 API にリクエストを送信しますが、ここに先ほど **1. API の構築** の一番最後に控えた API のエンドポイントを記述します。
+
+***
+
+- 解説にもあった通り、ソースコード上の REST API エンドポイントを書き換えます。
+  - Before: `https://**********.execute-api.ap-northeast-1.amazonaws.com/v1/translate`
+  - After: `[実際に控えた API エンドポイント]translate`
+
+***
+
+- 新しいリポジトリを作成します。
+  - [**こちら**](https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-new-repository) の手順に従って新たなリポジトリを作成しましょう。
+
+***
+
+- 変更をコミットして新しいリポジトリにソースコードを push します。
+
+  ```bash
+  git add .
+  git commit -m 'Set REST API endpoint'
+  git remote set-url origin [新しいリポジトリのURL]
+  git push origin main
+  ```
+
