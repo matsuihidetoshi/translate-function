@@ -1,4 +1,4 @@
-# Amazon Translate を使って
+# Amazon Translate を使って自作音声翻訳サイトを作る
 
 こんにちは！ [**株式会社スタートアップテクノロジー**](https://startup-technology.com/) テックリード、 [**AWS Serverless HERO**](https://aws.amazon.com/developer/community/heroes/hidetoshi-matsui/) の松井です！
 
