@@ -151,6 +151,8 @@ AWS マネジメントコンソールからサービスを利用できる他、 
   - ⑥で、 REST API と Lambda 関数を統合しています。
     - 翻訳文字数が多くなる可能性もあるので、文字数制限の厳しい GET メソッドではなく POST メソッドを受け付けるようにしています。
 
+***
+
 - 続いて、 Lambda 関数コード `src/translate-function.handler.ts` を解説していきます。
 
   ```typescript
@@ -204,12 +206,24 @@ AWS マネジメントコンソールからサービスを利用できる他、 
   - ②で、実際に Amazon Translate で翻訳しています。
   - ③で、翻訳ページにレスポンスします。
 
+***
+
 - 実際に Web API をデプロイします。
 
   ```bash
   cdk bootstrap #AWS アカウント内で一度も CDK を使用していない場合、実行します。
   cdk deploy
   ```
+
+***
+
+- 下記の通り質問されるので、 `y` を入力して `Enter` を押下してください。
+
+    ```bash
+    Do you wish to deploy these changes (y/n)? y
+    ```
+
+***
 
 - デプロイが成功したら下記のように出力されるので、 `=` に続く REST API のエンドポイントを控えます（後から AWS マネジメントコンソールで確認することもできます）。
 
@@ -218,3 +232,4 @@ AWS マネジメントコンソールからサービスを利用できる他、 
   TranslateFunctionStack.translatefunctionrestapiEndpoint******** = https://**********.execute-api.ap-northeast-1.amazonaws.com/v1/
   ```
 
+***
