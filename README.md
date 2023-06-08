@@ -387,3 +387,15 @@ AWS マネジメントコンソールからサービスを利用できる他、 
   git remote set-url origin [新しいリポジトリのURL]
   git push origin main
   ```
+
+### 3. 翻訳ページのデプロイ
+
+今回はフレームワークやライブラリを使用しない非常にシンプルな HTML + JavaScript の単一ファイルの Web ページですが、こちらを AWS Amplify を使ってホスティングします。
+
+***
+
+- AWS マネジメントコンソールにログインします。
+
+***
+
+- **AWS Amplify** を選択します。
