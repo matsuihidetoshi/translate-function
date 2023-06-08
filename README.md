@@ -440,4 +440,25 @@ AWS マネジメントコンソールからサービスを利用できる他、 
 
 ***
 
+- 先ほど選択したリポジトリをここでも選択し、他はそのままで **次へ** をクリックします。
+![スクリーンショット 2023-06-08 17 37 23](https://github.com/matsuihidetoshi/translate-function/assets/38583473/e98b8656-f875-43df-af61-ae5dabc0fc17)
 
+***
+
+- **AWS Amplify がプロジェクトルートディレクトリでホストされているすべてのファイルを自動的にデプロイすることを許可** をチェックし、 **次へ** をクリックします。
+![スクリーンショット 2023-06-08 17 39 42](https://github.com/matsuihidetoshi/translate-function/assets/38583473/ba08fb11-1cd2-485d-92f8-4b816ea30bc7)
+
+***
+
+- **保存してデプロイ** をクリックします。
+![スクリーンショット 2023-06-08 17 40 38](https://github.com/matsuihidetoshi/translate-function/assets/38583473/5ee9953d-c158-4a35-b8eb-d67c6a9ae067)
+
+***
+
+- デプロイフローが開始されるので、 **デプロイ** のフェーズが完了するまで待ってから、アプリケーションのURLをクリックします。
+![スクリーンショット 2023-06-08 17 41 29](https://github.com/matsuihidetoshi/translate-function/assets/38583473/d1d1b959-a196-496c-80d3-72e1c9ea3bb7)
+
+***
+
+- 下記のような画面が表示されれば成功です！
+![スクリーンショット 2023-06-08 17 48 13](https://github.com/matsuihidetoshi/translate-function/assets/38583473/12e52c2f-aedc-4d7f-9a3b-a2a2f257ed4d)
