@@ -399,3 +399,4 @@ AWS マネジメントコンソールからサービスを利用できる他、 
 ***
 
 - **AWS Amplify** を選択します。
+![スクリーンショット 2023-06-08 17 18 33](https://github.com/matsuihidetoshi/translate-function/assets/38583473/5d10f31e-aa84-4e97-9bde-c7978c633c17)
