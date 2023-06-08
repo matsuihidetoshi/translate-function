@@ -489,4 +489,9 @@ AWS マネジメントコンソールからサービスを利用できる他、 
 そのまま残していただいても構いませんが、冒頭の注意事項の通り思わぬ請求が発生する可能性もありますので、削除手順を記載します。
 
 - 先ほどの Amplify ホスティングのページにて、 **アクション** > **アプリの削除** を選択します。
-![スクリーンショット 2023-06-08 18 02 36](https://github.com/matsuihidetoshi/translate-function/assets/38583473/84220d16-0b90-48f3-ac05-755f2d13d4fa)
+
+  ![スクリーンショット 2023-06-08 18 02 36](https://github.com/matsuihidetoshi/translate-function/assets/38583473/84220d16-0b90-48f3-ac05-755f2d13d4fa)
+
+- **削除** を入力して、 **削除** をクリックします。
+
+  ![スクリーンショット 2023-06-08 18 49 09](https://github.com/matsuihidetoshi/translate-function/assets/38583473/ec2bf635-1539-482c-a654-6c34bb05c822)
