@@ -418,4 +418,19 @@ AWS マネジメントコンソールからサービスを利用できる他、 
 
 ***
 
+- このような画面が表示された場合、 **Authorize AWS Amplify** をクリックします。
+![スクリーンショット 2023-06-08 17 28 16](https://github.com/matsuihidetoshi/translate-function/assets/38583473/66db21f9-24e1-495d-9f16-9874fd19210e)
+
+***
+
+- 自分の個人の GitHub アカウントをクリックします。
+![スクリーンショット 2023-06-08 17 30 16](https://github.com/matsuihidetoshi/translate-function/assets/38583473/5768ddd5-efa1-424a-ba2e-64735152306c)
+
+***
+
+- **Only select repositories** を選択し、自分のリポジトリに push した先ほどの `voice-transcript` を選択し、 **Install & Authorize** をクリックします。
+![スクリーンショット 2023-06-08 17 31 22](https://github.com/matsuihidetoshi/translate-function/assets/38583473/3da51d31-f0e5-4072-935c-192bb8d02e02)
+
+***
+
 
