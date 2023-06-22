@@ -57,7 +57,7 @@ AWS マネジメントコンソールからサービスを利用できる他、 
 - 下記コマンドを実行し、リポジトリをクローンします。
 
     ```bash
-    git clone git@github.com:matsuihidetoshi/ivs-viewers-count-cdk.git
+    git clone git@github.com:matsuihidetoshi/translate-function.git
     ```
 
 ***
