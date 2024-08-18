@@ -10,9 +10,9 @@ export class TranslateFunctionStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props)
 
-    const translateFunction = new NodejsFunction(this, 'translate-function', {
+    const translateFunction = new NodejsFunction(this, 'demo-translate-function', {
       runtime: Runtime.NODEJS_18_X,
-      functionName: 'translateFunction',
+      functionName: 'demoTranslateFunction',
       entry: 'src/translate-function.handler.ts',
       timeout: Duration.seconds(60),
       logRetention: 30,
@@ -25,14 +25,14 @@ export class TranslateFunctionStack extends Stack {
       })
     )
 
-    const restApi = new RestApi(this, 'translate-function-rest-api', {
-      restApiName: 'RestApiForTranslateFunction',
+    const restApi = new RestApi(this, 'demo-translate-function-rest-api', {
+      restApiName: 'RestApiForDemoTranslateFunction',
       deployOptions: {
         stageName: 'v1',
       },
     })
 
-    const restApiTranslateResource = restApi.root.addResource('translate', {
+    const restApiTranslateResource = restApi.root.addResource('demo-translate', {
       defaultCorsPreflightOptions: {
         allowOrigins: Cors.ALL_ORIGINS,
         allowMethods: Cors.ALL_METHODS,
@@ -41,7 +41,7 @@ export class TranslateFunctionStack extends Stack {
       },
     })
 
-    const translateModel: Model = restApi.addModel('translateModel', {
+    const translateModel: Model = restApi.addModel('demoTranslateModel', {
       schema: {
         type: JsonSchemaType.OBJECT,
         properties: {
